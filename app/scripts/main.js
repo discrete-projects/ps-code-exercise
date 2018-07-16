@@ -39,7 +39,6 @@
       let descriptionItemArray = data.columns.description;
       let tagItemArray = data.columns.tag;
       let dateItemArray = data.columns.date;
-        console.log(dateItemArray);
 
       // Create subset arrays
       let subsetImg, subsetDes, subsetTag, subsetDate;
