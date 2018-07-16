@@ -15,23 +15,21 @@
         response.json().then(function (json) {
           data = json;
           
-          console.log(data);
           // If .json file exists, call createSub()
           createSubset();
         });
       } else {
+
         // Alert if network fails
         console.log(`NETWORK REQUEST FAILURE - ${response.status} : ${response.statusText}`);
       }
     }).bind;
 
-
-
     /*
      ** Step 2: Create Subset Array of 4 images from larger array of all images
      */
-
     function createSubset(counter) {
+
       // We use this so we only load 4 images at a time
       const chunk = 4;
       
@@ -71,10 +69,12 @@
         }
       }
     }
+
     /*
      ** Step 3: Iterate across Subset Array
      */
     function iterateAcrossSub(subsetImgArray, subsetDesArray, subsetTagArray, subsetDateArray) {
+      
       // We loop through the subsets and push the subset items into
       // populateDom function
       for (let j = 0; j < subsetImgArray.length; j++) {
@@ -85,10 +85,9 @@
     /*
      ** Step 4: Push each subset image item to the DOM
      */
-
     function populateDom(subsetImgItem, subsetDesItem, subsetTagItem, subsetDateItem) {
       const main = document.querySelector('main');
-        console.log(subsetDateItem)
+
       // create DOM elements
       const section = document.createElement('section');
       const heading = document.createElement('h2');
@@ -118,6 +117,7 @@
      ** Step 5: Listen for scroll event and load more images
      */
     window.addEventListener('scroll', function (e) {
+      
       // Get the position of the last image and offset it
       let lastImg = main.lastElementChild.offsetTop - 900;
 
