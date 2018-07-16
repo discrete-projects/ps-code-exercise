@@ -1,0 +1,72 @@
+
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Space out the masthead */
+header {
+  margin-bottom: 30px;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+#main {
+  section {
+    border: black solid 2px;
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+    animation: fadein 2s;
+  }
+
+  h2{
+    font-size: 27px;
+    white-space: nowrap;
+    width: calc(100% - 200px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: white;
+    line-height: 2em;
+    @media screen and (max-width: 480px) {
+      font-size: 17px;
+      width: 100%;
+      line-height: 1.5em;
+      top: 0;
+    }
+  }
+
+  p {
+    color: blue;
+    font-style: italic;
+  }
+
+  sup {
+    font-style: italic;
+    
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
