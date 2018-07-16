@@ -35,7 +35,8 @@
       // We use this so we only load 4 images at a time
       const chunk = 4;
       
-      // Create arrays based on JSON data
+      // Create arrays based on JSON data - Used arrays housed in columns objects to 
+      // make it trickier, could have loaded single objects in the rows section 
       let imageItemArray = data.columns.image;
       let descriptionItemArray = data.columns.description;
       let tagItemArray = data.columns.tag;
